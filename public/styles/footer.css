@@ -1,0 +1,37 @@
+footer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 45px;
+}
+
+footer section:first-child {
+    width: 64px;
+    height: 89px;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer img {
+    width: 48px;
+    height: 72px;
+}
+
+footer section:last-child {
+    width: 287px;
+    height: 89px; 
+}
+
+footer h3 {
+    font-weight: 400;
+    font-size: 26px;
+    display: flex;
+    align-items: center;
+    color: #293845;
+}

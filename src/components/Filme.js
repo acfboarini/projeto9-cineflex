@@ -3,6 +3,9 @@ import { useParams } from "react-router-dom";
 
 import axios from "axios";
 
+import Horarios from "./Horarios";
+import FooterFilme from "./FooterFilme";
+
 export default function Filme() {
     
     const { idFilme } = useParams();
@@ -13,28 +16,23 @@ export default function Filme() {
 
         promise.then(response => {
             const {data} = response;
-            console.log(data);
             setDias(data);
         })
     }, []);
 
     const {days} = dias;
-    console.log(days);
     
-    /*return dias.length !== 0? (
+    return days !== undefined? (
         <main className="filme-page">
             <h2>Selecione um horario</h2>
             <section className="lista-dias">
                 {
                     days.map(day => {
-                        const {id, date, weekday, showtimes} = day
-                        return (
-                            <h2 key={id}>{weekday} - {date}</h2>
-                        );
+                        return <Horarios key={day.id} day={day}/>
                     })
                 }
             </section>
+            <FooterFilme dias={dias}/>
         </main>
-    ): <p>Carregando...</p>;*/
-    return <></>
+    ): <p>Carregando...</p>;
 }

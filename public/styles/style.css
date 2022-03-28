@@ -22,3 +22,15 @@ header h1 {
     font-weight: 400;
     color: #E8833A;
 }
+
+h2 {
+    font-size: 24px;
+    font-weight: 400;
+    color: #293845;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+button {
+    border: none;
+}
